@@ -1,0 +1,21 @@
+{
+  "name": "language-tla-pluscal",
+  "version": "0.0.0",
+  "description": "TLA+ and PlusCal support for Atom",
+  "homepage": "https://github.com/wysiib/language-smt-lib",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wysiib/language-tla-pluscal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wysiib/language-tla-pluscal/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffeelint": "^1.10.1"
+  }
+}
