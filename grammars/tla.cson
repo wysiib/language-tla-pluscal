@@ -1,0 +1,57 @@
+'comment': ''
+'fileTypes': [
+  'tla'
+]
+'name': 'TLA+ / PlusCal'
+'patterns': [
+  {
+    'begin': '\\(\\*'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.tla'
+    'end': '\\*\\)'
+    'name': 'comment.block.tla'
+  }
+  {
+    'match': '\\b(ASSUME|ASSUMPTION|AXIOM|CASE|CHOOSE|CONSTANT|CONSTANTS|DOMAIN|ELSE|ENABLED|EXCEPT|EXTENDS|IF|IN|INSTANCE|LET|LOCAL|MODULE|OTHER|UNION|SUBSET|THEN|THEOREM|UNCHANGED|VARIABLE|VARIABLES|WITH)\\b'
+    'name': 'keyword.control.tla'
+  }
+  {
+    'match': '\\b(land|lnot|neg|in|leq|ll|prec|preceq|subset|subseteq|sqsubset|sqsubseteq|cap|intersect|sqcap|oplus|ominus|odot|otimes|slash|E|EE|lor|equiv|notin|geq|gg|succ|succeq|supseteq|supset|sqsupset|sqsupseteq|cup|union|sqcup|uplus|X|times|wr|propto|A|AA|div|cdot|o|circ|bullet|star|bigcirc|sim|simeq|asymp|approx|cong|doteq)\\b'
+    'name': 'keyword.operator.tla'
+  }
+  {
+    'match': '=>|=|>|<'
+    'name': 'keyword.operator.tla'
+  }
+  {
+    'match': '\\b(TRUE|FALSE)\\b'
+    'name': 'constant.language.tla'
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b'
+    'name': 'constant.numeric.tla'
+  }
+  {
+    'match': '\\b[a-zA-Z][a-zA-Z0-9_]*\\b'
+    'name': 'identifier.tla'
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.tla'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.tla'
+    'name': 'string.quoted.double.tla'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.tla'
+      }
+    ]
+  }
+]
+'scopeName': 'source.tla'
