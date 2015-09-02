@@ -17,11 +17,15 @@
     'name': 'keyword.control.tla'
   }
   {
-    'match': '\\b(land|lnot|neg|in|leq|ll|prec|preceq|subset|subseteq|sqsubset|sqsubseteq|cap|intersect|sqcap|oplus|ominus|odot|otimes|slash|E|EE|lor|equiv|notin|geq|gg|succ|succeq|supseteq|supset|sqsupset|sqsupseteq|cup|union|sqcup|uplus|X|times|wr|propto|A|AA|div|cdot|o|circ|bullet|star|bigcirc|sim|simeq|asymp|approx|cong|doteq)\\b'
+    'match': '\\\\(land|lnot|neg|leq|ll|prec|in|preceq|subset|subseteq|sqsubset|sqsubseteq|cap|intersect|sqcap|oplus|ominus|odot|otimes|slash|E|EE|lor|equiv|notin|geq|gg|succ|succeq|supseteq|supset|sqsupset|sqsupseteq|cup|union|sqcup|uplus|X|times|wr|propto|A|AA|div|cdot|o|circ|bullet|star|bigcirc|sim|simeq|asymp|approx|cong|doteq)'
     'name': 'keyword.operator.tla'
   }
   {
-    'match': '=>|=|>|<'
+    'match': '\\\\/|/\\\\'
+    'name': 'keyword.operator.tla'
+  }
+  {
+    'match': '=>|(=)?=|>|<|\\.\\.'
     'name': 'keyword.operator.tla'
   }
   {

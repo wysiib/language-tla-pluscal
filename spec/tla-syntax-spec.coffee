@@ -30,6 +30,18 @@ describe 'SMT-LIB grammar', ->
       expect(tokens[10]).toEqual value: '>', scopes: [ 'source.tla', 'keyword.operator.tla' ]
       expect(tokens[12]).toEqual value: '10', scopes: [ 'source.tla', 'constant.numeric.tla' ]
 
+  describe "latex operators", ->
+    it "colorizes latex operators correctly", ->
+      {tokens} = grammar.tokenizeLine "ID == /\\ id2 \\in 1..7"
+      expect(tokens[0]).toEqual value: 'ID', scopes: [ 'source.tla', 'identifier.tla' ]
+      expect(tokens[2]).toEqual value: '==', scopes: [ 'source.tla', 'keyword.operator.tla' ]
+      expect(tokens[4]).toEqual value: '/\\', scopes: [ 'source.tla', 'keyword.operator.tla' ]
+      expect(tokens[6]).toEqual value: 'id2', scopes: [ 'source.tla', 'identifier.tla' ]
+      expect(tokens[8]).toEqual value: '\\in', scopes: [ 'source.tla', 'keyword.operator.tla' ]
+      expect(tokens[10]).toEqual value: '1', scopes: [ 'source.tla', 'constant.numeric.tla' ]
+      expect(tokens[11]).toEqual value: '..', scopes: [ 'source.tla', 'keyword.operator.tla' ]
+      expect(tokens[12]).toEqual value: '7', scopes: [ 'source.tla', 'constant.numeric.tla' ]
+
   describe "comments", ->
     it "tokenizes a comment", ->
       {tokens} = grammar.tokenizeLine '(* this is my comment *)'
