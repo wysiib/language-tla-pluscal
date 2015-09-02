@@ -1,6 +1,6 @@
 {
   "name": "language-tla-pluscal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TLA+ and PlusCal support for Atom",
   "homepage": "https://github.com/wysiib/language-smt-lib",
   "license": "MIT",
