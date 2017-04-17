@@ -21,11 +21,11 @@
     'name': 'keyword.operator.tla'
   }
   {
-    'match': '\\\\/|/\\\\'
+    'match': '\\\\/|/\\\\|\\~|\\|->'
     'name': 'keyword.operator.tla'
   }
   {
-    'match': '=>|(=)?=|>|<|\\.\\.'
+    'match': '=>|(=)?=|>|<|\\.\\.|\\[\\]|-|\\+|\\*|/|\\^|\\%'
     'name': 'keyword.operator.tla'
   }
   {
