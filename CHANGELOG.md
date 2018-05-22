@@ -1,3 +1,6 @@
+## 0.2.1
+* fix highlighting bug reported as issue #2
+
 ## 0.2.0
 * support for TLA+ 2 (thanks @johnyf)
 * improved highlighting (thanks @johnyf)

@@ -17,7 +17,7 @@
     'name': 'keyword.control.tla'
   }
   {
-    'match': '\\\\(land|lnot|neg|leq|ll|prec|in|preceq|subset|subseteq|sqsubset|sqsubseteq|cap|intersect|sqcap|oplus|ominus|odot|otimes|slash|E|EE|lor|equiv|notin|geq|gg|succ|succeq|supseteq|supset|sqsupset|sqsupseteq|cup|union|sqcup|uplus|X|times|wr|propto|A|AA|div|cdot|o|circ|bullet|star|bigcirc|sim|simeq|asymp|approx|cong|doteq)'
+    'match': '\\\\(land|lnot|neg|leq|ll|preceq|prec|in|subseteq|subset|sqsubseteq|sqsubset|cap|intersect|sqcap|oplus|ominus|odot|otimes|slash|E|EE|lor|equiv|notin|geq|gg|succ|succeq|supseteq|supset|sqsupset|sqsupseteq|cup|union|sqcup|uplus|X|times|wr|propto|A|AA|div|cdot|o|circ|bullet|star|bigcirc|sim|simeq|asymp|approx|cong|doteq)'
     'name': 'keyword.operator.tla'
   }
   {
