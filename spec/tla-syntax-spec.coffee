@@ -1,4 +1,4 @@
-describe 'SMT-LIB grammar', ->
+describe 'TLA+ / PlusCal grammar', ->
   grammar = null
 
   beforeEach ->
