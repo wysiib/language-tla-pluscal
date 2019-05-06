@@ -49,7 +49,7 @@ describe 'TLA+ / PlusCal grammar', ->
       expect(tokens[1]).toEqual value: ' this is my comment ', scopes: [ 'source.tla', 'comment.block.tla' ]
       expect(tokens[2]).toEqual value: '*)', scopes: [ 'source.tla', 'comment.block.tla', 'punctuation.definition.comment.tla' ]
 
-  describe "comments", ->
+  describe "special comments", ->
     it "tokenizes a pluscal special comment", ->
       {tokens} = grammar.tokenizeLine '(* --algorithm theName "a string for testing purposes" *)'
       expect(tokens[0]).toEqual value: '(* --', scopes: [ 'source.tla', 'comment.pluscal.open.tla' ]
@@ -57,3 +57,16 @@ describe 'TLA+ / PlusCal grammar', ->
       expect(tokens[2]).toEqual value: ' ', scopes: [ 'source.tla' ]
       expect(tokens[3]).toEqual value: 'theName', scopes: [ 'source.tla', 'identifier.tla' ]
       expect(tokens[4]).toEqual value: ' ', scopes: [ 'source.tla' ]
+
+  describe "issues", ->
+    it "handles issue 2", ->
+      {tokens} = grammar.tokenizeLine 'ASSUME QA == /\\ \\A Q \\in QQ : Q \\subseteq A'
+      expect(tokens[0]).toEqual value: 'ASSUME', scopes: [ 'source.tla', 'keyword.control.tla' ]
+      expect(tokens[2]).toEqual value: 'QA', scopes: [ 'source.tla', 'identifier.tla' ]
+      expect(tokens[4]).toEqual value: '==', scopes: [ 'source.tla', 'keyword.operator.tla' ]
+      expect(tokens[6]).toEqual value: '/\\', scopes: [ 'source.tla', 'keyword.operator.tla' ]
+      expect(tokens[8]).toEqual value: '\\A', scopes: [ 'source.tla', 'keyword.operator.tla' ]
+      expect(tokens[10]).toEqual value: 'Q', scopes: [ 'source.tla', 'identifier.tla' ]
+      expect(tokens[12]).toEqual value: '\\in', scopes: [ 'source.tla', 'keyword.operator.tla' ]
+      expect(tokens[14]).toEqual value: 'QQ', scopes: [ 'source.tla', 'identifier.tla' ]
+      expect(tokens[18]).toEqual value: '\\subseteq', scopes: [ 'source.tla', 'keyword.operator.tla' ]
