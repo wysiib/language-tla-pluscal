@@ -1,3 +1,6 @@
+## 0.3.0
+* improved highlighting for PlusCal special comments
+
 ## 0.2.1
 * fix highlighting bug reported as issue #2
 
