@@ -5,6 +5,14 @@
 'name': 'TLA+ / PlusCal'
 'patterns': [
   {
+    'match': '\\(\\* --'
+    'name': 'comment.pluscal.open.tla'
+  }
+  {
+    'match': '\\*\\)'
+    'name': 'comment.pluscal.close.tla'
+  }
+  {
     'begin': '\\(\\*'
     'captures':
       '0':

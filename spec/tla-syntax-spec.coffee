@@ -48,3 +48,12 @@ describe 'TLA+ / PlusCal grammar', ->
       expect(tokens[0]).toEqual value: '(*', scopes: [ 'source.tla', 'comment.block.tla', 'punctuation.definition.comment.tla' ]
       expect(tokens[1]).toEqual value: ' this is my comment ', scopes: [ 'source.tla', 'comment.block.tla' ]
       expect(tokens[2]).toEqual value: '*)', scopes: [ 'source.tla', 'comment.block.tla', 'punctuation.definition.comment.tla' ]
+
+  describe "comments", ->
+    it "tokenizes a pluscal special comment", ->
+      {tokens} = grammar.tokenizeLine '(* --algorithm theName "a string for testing purposes" *)'
+      expect(tokens[0]).toEqual value: '(* --', scopes: [ 'source.tla', 'comment.pluscal.open.tla' ]
+      expect(tokens[1]).toEqual value: 'algorithm', scopes: [ 'source.tla', 'identifier.tla' ]
+      expect(tokens[2]).toEqual value: ' ', scopes: [ 'source.tla' ]
+      expect(tokens[3]).toEqual value: 'theName', scopes: [ 'source.tla', 'identifier.tla' ]
+      expect(tokens[4]).toEqual value: ' ', scopes: [ 'source.tla' ]
